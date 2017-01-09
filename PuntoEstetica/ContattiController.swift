@@ -76,7 +76,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   }
 
   @IBAction func acOrari(_ sender: UIButton) {
-    let orari = "• Lunedi Chiuso<br>• Martedi 9:30 - 19:30<br>• Mercoledi 9:30 - 19:30<br>• Giovedi 9:30 - 19:30<br>• Venerdi 9:30 - 19:30<br>• Sabato 9:30 - 13:30<br>• Domenica Chiuso"
+    let orari = "• Lunedi 15:00 - 19:30<br>• Martedi 10:00 - 19:30<br>• Mercoledi 10:00 - 19:30<br>• Giovedi 10:00 - 19:30<br>• Venerdi 10:00 - 19:30<br>• Sabato 10:00 - 14:00<br>• Domenica Chiuso"
     
     let alertVC = PMAlertController(title: "Orari Punto Estetica",
                                     description: orari.html2String + " ",

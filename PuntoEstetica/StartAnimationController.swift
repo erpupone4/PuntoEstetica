@@ -45,7 +45,14 @@ class StartAnimationController: UIViewController {
       self.lockBorder.removeFromSuperview()
       self.botLock.removeFromSuperview()
       
-      self.notifyAlert ()
+      self.topLock.isHidden = true
+      self.lockBorder.isHidden = true
+      self.botLock.isHidden = true
+      
+      if !DownloadManager.shared.isStartup {
+        self.notifyAlert ()
+        DownloadManager.shared.isStartup = true
+      }
     })
   }
   

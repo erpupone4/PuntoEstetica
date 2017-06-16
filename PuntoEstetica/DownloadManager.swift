@@ -12,9 +12,10 @@ class DownloadManager: NSObject {
   
   static let shared = DownloadManager()
   
-  var  MainController: CategorieController!
+  var MainController: CategorieController!
+  var localArra     : [CategoriaModel] = []
+  var isStartup     : Bool             = false
   
-  var localArra : [CategoriaModel] = []
   
   func downloadJSON(_ url : String) {
     

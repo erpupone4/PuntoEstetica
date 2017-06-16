@@ -45,6 +45,7 @@
 		800EDB841DEC7CB00069EDB4 /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EDB831DEC7CB00069EDB4 /* BubbleTransition.swift */; };
 		800EDB881DEC84C60069EDB4 /* DecodeHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EDB871DEC84C60069EDB4 /* DecodeHTML.swift */; };
 		800EDB8E1DEC8E150069EDB4 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EDB8D1DEC8E150069EDB4 /* ImageCell.swift */; };
+		802792BD1EF41E0300300D02 /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802792BC1EF41E0300300D02 /* CardController.swift */; };
 		80410DA41DEF3D590030A0B7 /* PMAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80410DA31DEF3D590030A0B7 /* PMAlertController.xib */; };
 		806262321DFAA908004C9AC8 /* StartAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806262311DFAA908004C9AC8 /* StartAnimationController.swift */; };
 		806262451DFAD436004C9AC8 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 806262331DFAD436004C9AC8 /* Roboto-Black.ttf */; };
@@ -118,6 +119,7 @@
 		800EDB831DEC7CB00069EDB4 /* BubbleTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleTransition.swift; sourceTree = "<group>"; };
 		800EDB871DEC84C60069EDB4 /* DecodeHTML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodeHTML.swift; sourceTree = "<group>"; };
 		800EDB8D1DEC8E150069EDB4 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		802792BC1EF41E0300300D02 /* CardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
 		80410DA31DEF3D590030A0B7 /* PMAlertController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PMAlertController.xib; sourceTree = "<group>"; };
 		806262311DFAA908004C9AC8 /* StartAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartAnimationController.swift; sourceTree = "<group>"; };
 		806262331DFAD436004C9AC8 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				80735C411DEDB3A300190C9C /* TrattamentiNoListController.swift */,
 				80EA615A1DF06FF700C2C95F /* PromoController.swift */,
 				80735C431DEDC6E100190C9C /* ContattiController.swift */,
+				802792BC1EF41E0300300D02 /* CardController.swift */,
 				800EDB731DEC51080069EDB4 /* DownloadManager.swift */,
 				800EDB1D1DEC4A140069EDB4 /* Assets.xcassets */,
 				800EDB221DEC4A140069EDB4 /* Info.plist */,
@@ -434,6 +437,7 @@
 				800EDB491DEC50210069EDB4 /* PMAlertController.swift in Sources */,
 				80735C481DEDCCA800190C9C /* Pin.swift in Sources */,
 				800EDB681DEC502C0069EDB4 /* ServerTrustPolicy.swift in Sources */,
+				802792BD1EF41E0300300D02 /* CardController.swift in Sources */,
 				800EDB741DEC51080069EDB4 /* DownloadManager.swift in Sources */,
 				800EDB441DEC50170069EDB4 /* isConnected.swift in Sources */,
 				800EDB631DEC502C0069EDB4 /* ParameterEncoding.swift in Sources */,

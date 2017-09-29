@@ -25,6 +25,10 @@ class StartAnimationController: UIViewController {
     super.viewDidAppear(animated)
     
     openLock()
+    
+    //Codice per colorare la band bianca in basso nell'iPhone X
+    self.view.backgroundColor = UIColor(rgba: "#404c5c")
+    //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
   }
   
   override func didReceiveMemoryWarning() {

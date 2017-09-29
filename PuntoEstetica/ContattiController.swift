@@ -15,10 +15,8 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   @IBOutlet var aiLoading: UIActivityIndicatorView!
   @IBOutlet var bbRoute: UIButton!
   @IBOutlet var bbPhone1: UIButton!
-  @IBOutlet var bbPhone2: UIButton!
   @IBOutlet var bbFacebook: UIButton!
   @IBOutlet var laMap: UILabel!
-  @IBOutlet var bbOrari: UIButton!
   
   
   override func viewDidLoad() {
@@ -28,9 +26,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
     mvMap.userTrackingMode = MKUserTrackingMode.none
     
     bbPhone1.setTitleColor(UIColor(rgba: "#DBDEE2"),   for: UIControlState.Normal)
-    bbPhone2.setTitleColor(UIColor(rgba: "#DBDEE2"),   for: UIControlState.Normal)
     bbFacebook.setTitleColor(UIColor(rgba: "#DBDEE2"), for: UIControlState.Normal)
-    bbOrari.setTitleColor(UIColor(rgba: "#DBDEE2"),    for: UIControlState.Normal)
     bbRoute.setTitleColor(UIColor(rgba: "#DBDEE2"),    for: UIControlState.Normal)
     laMap.textColor = UIColor(rgba: "#DBDEE2")
     
@@ -42,8 +38,8 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   }
   
   @IBAction func acRoute(_ sender: Any) {
-    let latitude:CLLocationDegrees  =  41.881803
-    let longitude:CLLocationDegrees =  12.460073999999963
+    let latitude:CLLocationDegrees  =  41.8623074
+    let longitude:CLLocationDegrees =  12.467293499999982
     
     let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
     let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
@@ -59,12 +55,6 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
 
   @IBAction func acPhone1(_ sender: UIButton) {
     if let url = NSURL(string: "tel://3914065138"), UIApplication.shared.canOpenURL(url as URL) {
-      UIApplication.shared.openURL(url as URL)
-    }
-  }
-  
-  @IBAction func acPhone2(_ sender: UIButton) {
-    if let url = NSURL(string: "tel://0631077846"), UIApplication.shared.canOpenURL(url as URL) {
       UIApplication.shared.openURL(url as URL)
     }
   }
@@ -98,7 +88,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
     
     
     if Reachability.isConnectedToNetwork() {
-      searchPoiWithName("Punto Estetica Monteverde", map: mvMap, closure: { (pins) in
+      searchPoiWithName("Via Vincenzo Brunacci, 37 Roma", map: mvMap, closure: { (pins) in
         //una volta trovato il punto cercato mettiamo il pin
         self.mvMap.addAnnotation(pins!)
         
@@ -114,7 +104,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
     let searchRequest = MKLocalSearchRequest()
     searchRequest.naturalLanguageQuery = name
     
-    let location = CLLocationCoordinate2D(latitude: 41.881803, longitude: 12.460073999999963)
+    let location = CLLocationCoordinate2D(latitude: 41.8623074, longitude: 12.467293499999982)
     let span     = MKCoordinateSpanMake(0.006, 0.006)
     let mappa    = MKCoordinateRegion(center: location, span: span)
     
@@ -136,7 +126,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
           for item in responseTest.mapItems {
             let it = item as MKMapItem
             let pin  = Pin(coordinate: it.placemark.coordinate)
-            pin.title = it.name
+            pin.title = "Punto Estetica Monteverde"//it.name
             pin.subtitle = it.placemark.thoroughfare! + ", " + it.placemark.subThoroughfare!
             closure(pin)
           }
@@ -181,7 +171,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 6
+    return 4
   }
   
   

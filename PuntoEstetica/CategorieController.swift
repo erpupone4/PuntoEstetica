@@ -17,8 +17,6 @@ class CategorieController: UITableViewController {
   @IBOutlet var laMani: UILabel!
   @IBOutlet var laEpilazione: UILabel!
   @IBOutlet var laDima: UILabel!
-  @IBOutlet var laFisio: UILabel!
-  @IBOutlet var laMedicina: UILabel!
   @IBOutlet var laMassaggi: UILabel!
   
   var config : SwiftLoader.Config = SwiftLoader.Config()
@@ -46,8 +44,6 @@ class CategorieController: UITableViewController {
     laMani.textColor       = UIColor(rgba: "#DBDEE2")
     laEpilazione.textColor = UIColor(rgba: "#DBDEE2")
     laDima.textColor       = UIColor(rgba: "#DBDEE2")
-    laFisio.textColor      = UIColor(rgba: "#DBDEE2")
-    laMedicina.textColor   = UIColor(rgba: "#DBDEE2")
     laMassaggi.textColor   = UIColor(rgba: "#DBDEE2")
     
     configLoading()
@@ -63,7 +59,7 @@ class CategorieController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 8
+    return 5
   }
   
   override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {

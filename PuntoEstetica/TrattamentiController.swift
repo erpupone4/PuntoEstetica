@@ -37,6 +37,8 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    print("Trattamenti NUMERO->")
+    print(TratList.count + 1)
     if isSearch && mySearchBar.text!.characters.count > 0 {
       return FiltTratList.count + 1
     } else {

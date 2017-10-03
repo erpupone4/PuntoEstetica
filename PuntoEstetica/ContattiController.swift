@@ -17,6 +17,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   @IBOutlet var bbPhone1: UIButton!
   @IBOutlet var bbFacebook: UIButton!
   @IBOutlet var laMap: UILabel!
+  @IBOutlet var bbParking: UIButton!
   
   
   override func viewDidLoad() {
@@ -28,6 +29,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
     bbPhone1.setTitleColor(UIColor(rgba: "#DBDEE2"),   for: UIControlState.Normal)
     bbFacebook.setTitleColor(UIColor(rgba: "#DBDEE2"), for: UIControlState.Normal)
     bbRoute.setTitleColor(UIColor(rgba: "#DBDEE2"),    for: UIControlState.Normal)
+    bbParking.setTitleColor(UIColor(rgba: "#DBDEE2"),  for: UIControlState.Normal)
     laMap.textColor = UIColor(rgba: "#DBDEE2")
     
     let tabBarHeight            = self.tabBarController?.tabBar.bounds.height
@@ -171,7 +173,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 4
+    return 5
   }
   
   

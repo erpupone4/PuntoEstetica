@@ -418,9 +418,6 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Massaggi &amp; Relax" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9J-NM-uI2">
                                                     <rect key="frame" x="135" y="8" width="199" height="73"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="199" id="qLg-xQ-A8c"/>
-                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -436,11 +433,12 @@
                                             <constraints>
                                                 <constraint firstItem="IdS-MV-g1w" firstAttribute="leading" secondItem="jyl-bV-VMO" secondAttribute="leading" constant="8" id="2hP-GE-VQy"/>
                                                 <constraint firstItem="LoW-sh-phS" firstAttribute="trailing" secondItem="jyl-bV-VMO" secondAttribute="trailingMargin" id="6de-0r-dP6"/>
-                                                <constraint firstItem="X9J-NM-uI2" firstAttribute="top" secondItem="jyl-bV-VMO" secondAttribute="topMargin" id="7vq-AM-wih"/>
+                                                <constraint firstItem="X9J-NM-uI2" firstAttribute="top" secondItem="jyl-bV-VMO" secondAttribute="topMargin" id="GpA-UE-NKo"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="LoW-sh-phS" secondAttribute="bottom" constant="24.5" id="HhV-S7-Uyg"/>
-                                                <constraint firstItem="X9J-NM-uI2" firstAttribute="centerY" secondItem="IdS-MV-g1w" secondAttribute="centerY" id="M60-Cn-Ocw"/>
                                                 <constraint firstItem="LoW-sh-phS" firstAttribute="top" secondItem="jyl-bV-VMO" secondAttribute="topMargin" constant="24" id="Qkr-Ex-Hrv"/>
-                                                <constraint firstItem="X9J-NM-uI2" firstAttribute="leading" secondItem="IdS-MV-g1w" secondAttribute="trailing" constant="17" id="uPz-Ub-CfG"/>
+                                                <constraint firstItem="LoW-sh-phS" firstAttribute="leading" secondItem="X9J-NM-uI2" secondAttribute="trailing" constant="8" symbolic="YES" id="cho-Sf-C60"/>
+                                                <constraint firstItem="X9J-NM-uI2" firstAttribute="centerY" secondItem="LoW-sh-phS" secondAttribute="centerY" id="eMd-zE-QbS"/>
+                                                <constraint firstItem="X9J-NM-uI2" firstAttribute="leading" secondItem="IdS-MV-g1w" secondAttribute="trailing" constant="17" id="vhp-9U-R03"/>
                                                 <constraint firstItem="IdS-MV-g1w" firstAttribute="top" secondItem="jyl-bV-VMO" secondAttribute="top" constant="4" id="viS-xx-Nxj"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -450,6 +448,112 @@
                                             <outlet property="imgCate" destination="IdS-MV-g1w" id="3PK-Wa-rJp"/>
                                             <outlet property="laNome" destination="X9J-NM-uI2" id="cDl-zR-cxL"/>
                                             <segue destination="thu-6O-dRk" kind="show" identifier="detail" id="JqX-PK-Oye"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellMassaggi" rowHeight="90" id="3T7-Hb-iNI" userLabel="cellFisio" customClass="CategoriaCell" customModule="PuntoEstetica" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="540" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3T7-Hb-iNI" id="28t-ma-Wla">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fisio_Home" translatesAutoresizingMaskIntoConstraints="NO" id="rQa-io-h8Y">
+                                                    <rect key="frame" x="8" y="4" width="110" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="aGU-dr-uqo"/>
+                                                        <constraint firstAttribute="height" constant="80" id="rF3-ma-P3W"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fisioterapia" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="noy-7D-rOa">
+                                                    <rect key="frame" x="135" y="8" width="199" height="73"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="seu-ty-RwL">
+                                                    <rect key="frame" x="342" y="32" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="HFD-1C-pFf"/>
+                                                        <constraint firstAttribute="height" constant="25" id="s6E-0U-N3k"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="seu-ty-RwL" firstAttribute="leading" secondItem="noy-7D-rOa" secondAttribute="trailing" constant="8" symbolic="YES" id="BSy-KS-axC"/>
+                                                <constraint firstItem="noy-7D-rOa" firstAttribute="top" secondItem="28t-ma-Wla" secondAttribute="topMargin" id="F3L-JT-uhr"/>
+                                                <constraint firstItem="rQa-io-h8Y" firstAttribute="leading" secondItem="28t-ma-Wla" secondAttribute="leading" constant="8" id="FcD-GJ-Wrq"/>
+                                                <constraint firstItem="seu-ty-RwL" firstAttribute="trailing" secondItem="28t-ma-Wla" secondAttribute="trailingMargin" id="Vln-cV-BPC"/>
+                                                <constraint firstItem="noy-7D-rOa" firstAttribute="centerY" secondItem="seu-ty-RwL" secondAttribute="centerY" id="ZAK-Sv-TjH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="seu-ty-RwL" secondAttribute="bottom" constant="24.5" id="eXb-vl-ESw"/>
+                                                <constraint firstItem="noy-7D-rOa" firstAttribute="leading" secondItem="rQa-io-h8Y" secondAttribute="trailing" constant="17" id="lDl-KF-G4Q"/>
+                                                <constraint firstItem="rQa-io-h8Y" firstAttribute="top" secondItem="28t-ma-Wla" secondAttribute="top" constant="4" id="v0n-sd-pAj"/>
+                                                <constraint firstItem="seu-ty-RwL" firstAttribute="top" secondItem="28t-ma-Wla" secondAttribute="topMargin" constant="24" id="xIX-0D-Lu7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="imgCate" destination="rQa-io-h8Y" id="nxP-5M-Pqu"/>
+                                            <outlet property="laNome" destination="noy-7D-rOa" id="Xyu-tV-TRf"/>
+                                            <segue destination="IJN-Vz-SzB" kind="show" identifier="detailNoList" id="j6T-Zf-AhB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellMassaggi" rowHeight="90" id="bnw-O2-JaN" userLabel="cellMedici" customClass="CategoriaCell" customModule="PuntoEstetica" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="630" width="375" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bnw-O2-JaN" id="83y-Bl-wLP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Medicina_Home" translatesAutoresizingMaskIntoConstraints="NO" id="ItV-gZ-2YG">
+                                                    <rect key="frame" x="8" y="4" width="110" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="FnQ-Fm-Z1t"/>
+                                                        <constraint firstAttribute="width" constant="110" id="qXc-zg-Lk7"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicina Estetica" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYZ-J2-zoN">
+                                                    <rect key="frame" x="135" y="8" width="199" height="73"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="L4Z-Wy-sWW">
+                                                    <rect key="frame" x="342" y="32" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="WlJ-Tv-zf5"/>
+                                                        <constraint firstAttribute="width" constant="25" id="sON-ke-tzp"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="L4Z-Wy-sWW" firstAttribute="leading" secondItem="EYZ-J2-zoN" secondAttribute="trailing" constant="8" symbolic="YES" id="0sC-So-tAG"/>
+                                                <constraint firstItem="ItV-gZ-2YG" firstAttribute="top" secondItem="83y-Bl-wLP" secondAttribute="top" constant="4" id="CPJ-iM-JAV"/>
+                                                <constraint firstItem="EYZ-J2-zoN" firstAttribute="top" secondItem="83y-Bl-wLP" secondAttribute="topMargin" id="CSc-ww-sH6"/>
+                                                <constraint firstItem="ItV-gZ-2YG" firstAttribute="leading" secondItem="83y-Bl-wLP" secondAttribute="leading" constant="8" id="PlT-nR-7p3"/>
+                                                <constraint firstItem="EYZ-J2-zoN" firstAttribute="centerY" secondItem="L4Z-Wy-sWW" secondAttribute="centerY" id="Yup-DM-gUL"/>
+                                                <constraint firstItem="EYZ-J2-zoN" firstAttribute="leading" secondItem="ItV-gZ-2YG" secondAttribute="trailing" constant="17" id="dgI-Kq-cMH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="L4Z-Wy-sWW" secondAttribute="bottom" constant="24.5" id="dwa-EY-qdK"/>
+                                                <constraint firstItem="L4Z-Wy-sWW" firstAttribute="top" secondItem="83y-Bl-wLP" secondAttribute="topMargin" constant="24" id="gp5-nd-dHx"/>
+                                                <constraint firstItem="L4Z-Wy-sWW" firstAttribute="trailing" secondItem="83y-Bl-wLP" secondAttribute="trailingMargin" id="q8j-MD-VhR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="imgCate" destination="ItV-gZ-2YG" id="nJu-SZ-3GZ"/>
+                                            <outlet property="laNome" destination="EYZ-J2-zoN" id="HQh-fp-dB7"/>
+                                            <segue destination="IJN-Vz-SzB" kind="show" identifier="detailNoList" id="EOf-Ne-Fts"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -466,8 +570,10 @@
                         <outlet property="laCorpo" destination="yfZ-s5-hZj" id="LjI-Wa-SRe"/>
                         <outlet property="laDima" destination="F8r-b2-3ok" id="9Pn-dn-80w"/>
                         <outlet property="laEpilazione" destination="hqa-3s-gLv" id="vbA-PG-Xue"/>
+                        <outlet property="laFisio" destination="noy-7D-rOa" id="gBm-lJ-DFp"/>
                         <outlet property="laMani" destination="zOX-pF-Pyq" id="CmY-8D-Dnm"/>
                         <outlet property="laMassaggi" destination="X9J-NM-uI2" id="0C0-D6-G38"/>
+                        <outlet property="laMedici" destination="EYZ-J2-zoN" id="VOD-Sp-aok"/>
                         <outlet property="laViso" destination="of8-Q7-sng" id="RfC-vA-Rfv"/>
                     </connections>
                 </tableViewController>
@@ -715,6 +821,30 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ParkingCell" id="9a7-jg-FvV">
+                                        <rect key="frame" x="0.0" y="482" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9a7-jg-FvV" id="vKt-j0-g4V">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YT5-Ok-0Rn">
+                                                    <rect key="frame" x="8" y="1" width="359" height="42"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                                    <state key="normal" title="  Parcheggio Gratuito per i Clienti" image="parking">
+                                                        <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="YT5-Ok-0Rn" secondAttribute="trailing" constant="8" id="6Fa-Ud-hY9"/>
+                                                <constraint firstAttribute="bottom" secondItem="YT5-Ok-0Rn" secondAttribute="bottom" constant="1" id="GL5-vT-Xhl"/>
+                                                <constraint firstItem="YT5-Ok-0Rn" firstAttribute="top" secondItem="vKt-j0-g4V" secondAttribute="top" constant="1" id="I3e-f1-8Df"/>
+                                                <constraint firstItem="YT5-Ok-0Rn" firstAttribute="leading" secondItem="vKt-j0-g4V" secondAttribute="leading" constant="8" id="bVh-Zo-Scx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -730,6 +860,7 @@
                     <connections>
                         <outlet property="aiLoading" destination="yqk-x9-87H" id="bq1-AS-JVA"/>
                         <outlet property="bbFacebook" destination="UWT-wv-bat" id="I0e-CF-jwU"/>
+                        <outlet property="bbParking" destination="YT5-Ok-0Rn" id="XSl-aG-xho"/>
                         <outlet property="bbPhone1" destination="ZRu-AJ-E8j" id="ede-YW-2aL"/>
                         <outlet property="bbRoute" destination="lQ6-bT-vgB" id="Sxx-kf-lzF"/>
                         <outlet property="laMap" destination="3RW-44-IAB" id="u97-Ra-Vdb"/>
@@ -1042,7 +1173,9 @@
         <image name="Corpo_Home" width="1000" height="750"/>
         <image name="Dimagrimento_Home" width="1000" height="750"/>
         <image name="Epilazione_Home" width="1000" height="750"/>
+        <image name="Fisio_Home" width="1000" height="750"/>
         <image name="Mani_Home" width="1000" height="750"/>
+        <image name="Medicina_Home" width="1000" height="750"/>
         <image name="Relax_Home" width="1000" height="750"/>
         <image name="Viso_Home" width="1000" height="750"/>
         <image name="arrow" width="33" height="33"/>
@@ -1060,6 +1193,7 @@
         <image name="infoSel" width="25" height="25"/>
         <image name="maps" width="33" height="33"/>
         <image name="new" width="33" height="33"/>
+        <image name="parking" width="33" height="33"/>
         <image name="promo" width="25" height="25"/>
         <image name="promoSel" width="25" height="25"/>
         <image name="route" width="33" height="33"/>
@@ -1067,6 +1201,7 @@
         <image name="topLaunch" width="621" height="552"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Xzo-tg-ui3"/>
+        <segue reference="0WV-38-IGd"/>
+        <segue reference="EOf-Ne-Fts"/>
     </inferredMetricsTieBreakers>
 </document>

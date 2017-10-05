@@ -547,7 +547,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dimagrimento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8r-b2-3ok">
-                                                    <rect key="frame" x="135" y="8" width="128" height="73"/>
+                                                    <rect key="frame" x="135" y="8" width="126" height="73"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1285,7 +1285,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a3-3D-x5V">
-                                            <rect key="frame" x="281" y="37.5" width="58" height="18.5"/>
+                                            <rect key="frame" x="281" y="39.5" width="58" height="16.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="58" id="UfG-17-FMO"/>
                                             </constraints>

@@ -255,7 +255,7 @@
         <!--PuntoEstetica-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" customClass="TabBarController" customModule="PuntoEstetica" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbar" id="49e-Tb-3d3" customClass="TabBarController" customModule="PuntoEstetica" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="PuntoEstetica" id="Fzy-PZ-7Ja">
                         <barButtonItem key="backBarButtonItem" title=" " id="ZDz-zk-rCu"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="2P2-H9-cNt">
@@ -265,7 +265,7 @@
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <state key="normal" image="card_icon"/>
                                 <connections>
-                                    <segue destination="pUB-Mw-Tg6" kind="presentation" id="t0b-E7-1Ec"/>
+                                    <segue destination="pUB-Mw-Tg6" kind="presentation" identifier="showcard" id="t0b-E7-1Ec"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -1384,6 +1384,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="0WV-38-IGd"/>
-        <segue reference="j6T-Zf-AhB"/>
+        <segue reference="O9c-2N-X6E"/>
     </inferredMetricsTieBreakers>
 </document>

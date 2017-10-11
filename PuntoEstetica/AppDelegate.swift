@@ -49,8 +49,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       DownloadManager.shared.downloadJSON("http://www.puntoesteticamonteverde.it/DatiApp.json")
     }))
     
-    
-    
     while (presentedVC!.presentedViewController != nil)  {
       presentedVC = presentedVC!.presentedViewController
     }
@@ -92,34 +90,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           default: break
       }
     }
-//
-//  //*** MODIFICA 3D TOUCH ***\\
-//  // questo metodo scatta quando viene premuto un pulsante nel menù del 3D Touch chè è uscito premendo con forza l'icona dell'App
-//  private func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
-//    debugPrint("Chiamato")
-//    // il metodo ci porta in dono la var shortcutItem che contiene le chiavi, quindi possiamo fare uno switch
-//    switch shortcutItem.type {
-//      // questa è la chiave inserita nel file info.plist alla voce UIApplicationShortcutItems
-//      // per capire tutto il passaggio della chiave consultare il libro iOS 9 by Tutorial che trovi su Dropbox
-//    // pagine 120 e 121
-//    case "com.puntoestetica.call":
-//      // becchiamo lo storyboard
-//      let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//
-//      // gli diciamo di caricare il controller che nel campo Storyboard ID (tab carta di identità) è stato chiamato add
-//      // altri non è che il nostro AddController.swift
-//      // (ma poichè AddController è dentro un Navigation il nome è stato dato al NavigationController che sta prima di lui)
-//      let addController = storyboard.instantiateViewController(withIdentifier: "info")
-//
-//      // becchiamo il controller principale e gli diciamo di presentare l'AddController
-//      window?.rootViewController?.present(addController, animated: true, completion: nil)
-//
-//    default: break
-//    }
-//    completionHandler(true)
-//
-//  }
+  //*** MODIFICA TODAY ***\\
   
+  // quando accade viene invocato il seguente metodo che NON c'è di suo, quindi va implementato
+  func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+    
+    // lavoriamo l'url per estrarre il valore passato alla query
+    if let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) {
+      if let queryItems = urlComponents.queryItems {
+        for queryItem in queryItems {
+          if queryItem.name == "q" {
+            if queryItem.value != nil {
+              let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+              
+              let addController = storyboard.instantiateViewController(withIdentifier: "card")
+              
+              window?.rootViewController?.present(addController, animated: true, completion: nil)
+              
+              break
+            }
+          }
+        }
+      }
+    }
+    
+    return true
+    
+  }
   func applicationWillResignActive(_ application: UIApplication) {
   }
   

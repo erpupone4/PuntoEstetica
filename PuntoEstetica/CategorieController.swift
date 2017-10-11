@@ -117,8 +117,7 @@ class CategorieController: UITableViewController {
         self.tableView.deselectRow(at: indexPath, animated:true)
       }
     }
-  }
-    
+  }    
   
   //CONFIGURA LA VIEW CHE GIRA PER IL LOADING
   func configLoading() {

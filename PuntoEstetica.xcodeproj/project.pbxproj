@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		800EDB151DEC4A140069EDB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EDB141DEC4A140069EDB4 /* AppDelegate.swift */; };
 		800EDB1C1DEC4A140069EDB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800EDB1A1DEC4A140069EDB4 /* Main.storyboard */; };
-		800EDB1E1DEC4A140069EDB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800EDB1D1DEC4A140069EDB4 /* Assets.xcassets */; };
 		800EDB3E1DEC4FF60069EDB4 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EDB3C1DEC4FF60069EDB4 /* ProgressView.swift */; };
 		800EDB3F1DEC4FF60069EDB4 /* UINavigationController+Progress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EDB3D1DEC4FF60069EDB4 /* UINavigationController+Progress.swift */; };
 		800EDB431DEC50170069EDB4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800EDB401DEC50170069EDB4 /* Extensions.swift */; };
@@ -74,13 +73,44 @@
 		80EA615B1DF06FF700C2C95F /* PromoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EA615A1DF06FF700C2C95F /* PromoController.swift */; };
 		80EA615D1DF0702300C2C95F /* PromoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EA615C1DF0702300C2C95F /* PromoCell.swift */; };
 		80FBC1481DEC94B500CC97CF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FBC1471DEC94B500CC97CF /* UIColorExtension.swift */; };
+		CAE205131F8E249F005CE925 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE205121F8E249F005CE925 /* NotificationCenter.framework */; };
+		CAE205191F8E249F005CE925 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE205171F8E249F005CE925 /* MainInterface.storyboard */; };
+		CAE2051D1F8E249F005CE925 /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CAE205101F8E249F005CE925 /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CAE2052B1F8E4FCA005CE925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAE2052A1F8E4FCA005CE925 /* Assets.xcassets */; };
+		CAE2052C1F8E50A1005CE925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAE2052A1F8E4FCA005CE925 /* Assets.xcassets */; };
+		CAE2052E1F8E6195005CE925 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE2052D1F8E6195005CE925 /* TodayViewController.swift */; };
+		CAE205301F8E669B005CE925 /* TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE2052F1F8E669B005CE925 /* TodayCell.swift */; };
+		CAE205321F8E6DBE005CE925 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800EDB1A1DEC4A140069EDB4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CAE2051B1F8E249F005CE925 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 800EDB091DEC4A140069EDB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CAE2050F1F8E249F005CE925;
+			remoteInfo = Today;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CAE205211F8E249F005CE925 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CAE2051D1F8E249F005CE925 /* Today.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		800EDB111DEC4A140069EDB4 /* PuntoEstetica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PuntoEstetica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		800EDB141DEC4A140069EDB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		800EDB1B1DEC4A140069EDB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		800EDB1D1DEC4A140069EDB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		800EDB221DEC4A140069EDB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		800EDB3B1DEC4FF60069EDB4 /* KYNavigationProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KYNavigationProgress.h; sourceTree = "<group>"; };
 		800EDB3C1DEC4FF60069EDB4 /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
@@ -149,6 +179,14 @@
 		80EA615C1DF0702300C2C95F /* PromoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoCell.swift; sourceTree = "<group>"; };
 		80EA615E1DF07D4300C2C95F /* PuntoEstetica.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PuntoEstetica.entitlements; sourceTree = "<group>"; };
 		80FBC1471DEC94B500CC97CF /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		CAE205101F8E249F005CE925 /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAE205121F8E249F005CE925 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		CAE205181F8E249F005CE925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		CAE2051A1F8E249F005CE925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAE205281F8E44D3005CE925 /* Today.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Today.entitlements; sourceTree = "<group>"; };
+		CAE2052A1F8E4FCA005CE925 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAE2052D1F8E6195005CE925 /* TodayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		CAE2052F1F8E669B005CE925 /* TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +198,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CAE2050D1F8E249F005CE925 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE205131F8E249F005CE925 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -167,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				800EDB131DEC4A140069EDB4 /* PuntoEstetica */,
+				CAE205141F8E249F005CE925 /* Today */,
+				CAE205111F8E249F005CE925 /* Frameworks */,
 				800EDB121DEC4A140069EDB4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -175,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				800EDB111DEC4A140069EDB4 /* PuntoEstetica.app */,
+				CAE205101F8E249F005CE925 /* Today.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,7 +246,7 @@
 				80735C431DEDC6E100190C9C /* ContattiController.swift */,
 				802792BC1EF41E0300300D02 /* CardController.swift */,
 				800EDB731DEC51080069EDB4 /* DownloadManager.swift */,
-				800EDB1D1DEC4A140069EDB4 /* Assets.xcassets */,
+				CAE2052A1F8E4FCA005CE925 /* Assets.xcassets */,
 				800EDB221DEC4A140069EDB4 /* Info.plist */,
 				800EDB891DEC87E40069EDB4 /* Font */,
 				800EDB6F1DEC505D0069EDB4 /* Models */,
@@ -313,6 +362,26 @@
 			name = Font;
 			sourceTree = "<group>";
 		};
+		CAE205111F8E249F005CE925 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CAE205121F8E249F005CE925 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAE205141F8E249F005CE925 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				CAE205281F8E44D3005CE925 /* Today.entitlements */,
+				CAE2052D1F8E6195005CE925 /* TodayViewController.swift */,
+				CAE2052F1F8E669B005CE925 /* TodayCell.swift */,
+				CAE205171F8E249F005CE925 /* MainInterface.storyboard */,
+				CAE2051A1F8E249F005CE925 /* Info.plist */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -323,15 +392,34 @@
 				800EDB0D1DEC4A140069EDB4 /* Sources */,
 				800EDB0E1DEC4A140069EDB4 /* Frameworks */,
 				800EDB0F1DEC4A140069EDB4 /* Resources */,
+				CAE205211F8E249F005CE925 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CAE2051C1F8E249F005CE925 /* PBXTargetDependency */,
 			);
 			name = PuntoEstetica;
 			productName = PuntoEstetica;
 			productReference = 800EDB111DEC4A140069EDB4 /* PuntoEstetica.app */;
 			productType = "com.apple.product-type.application";
+		};
+		CAE2050F1F8E249F005CE925 /* Today */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAE205201F8E249F005CE925 /* Build configuration list for PBXNativeTarget "Today" */;
+			buildPhases = (
+				CAE2050C1F8E249F005CE925 /* Sources */,
+				CAE2050D1F8E249F005CE925 /* Frameworks */,
+				CAE2050E1F8E249F005CE925 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Today;
+			productName = Today;
+			productReference = CAE205101F8E249F005CE925 /* Today.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -339,7 +427,7 @@
 		800EDB091DEC4A140069EDB4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0810;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Alessio Forte";
 				TargetAttributes = {
@@ -352,6 +440,17 @@
 								enabled = 1;
 							};
 							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					CAE2050F1F8E249F005CE925 = {
+						CreatedOnToolsVersion = 9.0;
+						DevelopmentTeam = JMAE6SWMQB;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
 							};
 						};
@@ -372,6 +471,7 @@
 			projectRoot = "";
 			targets = (
 				800EDB101DEC4A140069EDB4 /* PuntoEstetica */,
+				CAE2050F1F8E249F005CE925 /* Today */,
 			);
 		};
 /* End PBXProject section */
@@ -384,8 +484,8 @@
 				806262501DFAD436004C9AC8 /* Roboto-ThinItalic.ttf in Resources */,
 				8062624F1DFAD436004C9AC8 /* Roboto-Thin.ttf in Resources */,
 				806262551DFAD436004C9AC8 /* RobotoCondensed-LightItalic.ttf in Resources */,
-				800EDB1E1DEC4A140069EDB4 /* Assets.xcassets in Resources */,
 				800EDB1C1DEC4A140069EDB4 /* Main.storyboard in Resources */,
+				CAE2052B1F8E4FCA005CE925 /* Assets.xcassets in Resources */,
 				806262521DFAD436004C9AC8 /* RobotoCondensed-BoldItalic.ttf in Resources */,
 				806262531DFAD436004C9AC8 /* RobotoCondensed-Italic.ttf in Resources */,
 				8062624B1DFAD436004C9AC8 /* Roboto-LightItalic.ttf in Resources */,
@@ -402,6 +502,16 @@
 				8062624E1DFAD436004C9AC8 /* Roboto-Regular.ttf in Resources */,
 				806262451DFAD436004C9AC8 /* Roboto-Black.ttf in Resources */,
 				8062624A1DFAD436004C9AC8 /* Roboto-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CAE2050E1F8E249F005CE925 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE205321F8E6DBE005CE925 /* Main.storyboard in Resources */,
+				CAE2052C1F8E50A1005CE925 /* Assets.xcassets in Resources */,
+				CAE205191F8E249F005CE925 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,7 +570,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CAE2050C1F8E249F005CE925 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAE2052E1F8E6195005CE925 /* TodayViewController.swift in Sources */,
+				CAE205301F8E669B005CE925 /* TodayCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CAE2051C1F8E249F005CE925 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CAE2050F1F8E249F005CE925 /* Today */;
+			targetProxy = CAE2051B1F8E249F005CE925 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		800EDB1A1DEC4A140069EDB4 /* Main.storyboard */ = {
@@ -469,6 +596,14 @@
 				800EDB1B1DEC4A140069EDB4 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAE205171F8E249F005CE925 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAE205181F8E249F005CE925 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -570,9 +705,11 @@
 		800EDB261DEC4A140069EDB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = PuntoEstetica/PuntoEstetica.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JMAE6SWMQB;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -594,9 +731,11 @@
 		800EDB271DEC4A140069EDB4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = PuntoEstetica/PuntoEstetica.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = JMAE6SWMQB;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -612,6 +751,67 @@
 				PROVISIONING_PROFILE_SPECIFIER = com.AlessioForte.PuntoEstetica;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CAE2051E1F8E249F005CE925 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JMAE6SWMQB;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Today/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PuntoEstetica.mobile.Today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CAE2051F1F8E249F005CE925 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = Today/Today.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JMAE6SWMQB;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = Today/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PuntoEstetica.mobile.Today;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -632,6 +832,15 @@
 			buildConfigurations = (
 				800EDB261DEC4A140069EDB4 /* Debug */,
 				800EDB271DEC4A140069EDB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAE205201F8E249F005CE925 /* Build configuration list for PBXNativeTarget "Today" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAE2051E1F8E249F005CE925 /* Debug */,
+				CAE2051F1F8E249F005CE925 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

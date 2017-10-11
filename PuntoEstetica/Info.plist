@@ -82,5 +82,32 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeContact</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Chiamaci</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.puntoestetica.call</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeLocation</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Ottieni Indicazioni</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.puntoestetica.route</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>3dCard</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Fidelity Card</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.puntoestetica.card</string>
+		</dict>
+	</array>
 </dict>
 </plist>

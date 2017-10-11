@@ -19,7 +19,7 @@
         <!--Card Controller-->
         <scene sceneID="5ze-xj-dpn">
             <objects>
-                <viewController id="pUB-Mw-Tg6" customClass="CardController" customModule="PuntoEstetica" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="card" id="pUB-Mw-Tg6" customClass="CardController" customModule="PuntoEstetica" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W9b-8d-EH8"/>
                         <viewControllerLayoutGuide type="bottom" id="e9V-BP-5RX"/>
@@ -831,7 +831,7 @@
         <!--Contatti-->
         <scene sceneID="FTu-Oz-xGX">
             <objects>
-                <tableViewController id="M0l-pb-YGX" customClass="ContattiController" customModule="PuntoEstetica" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="info" id="M0l-pb-YGX" customClass="ContattiController" customModule="PuntoEstetica" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="RV6-9c-jHG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

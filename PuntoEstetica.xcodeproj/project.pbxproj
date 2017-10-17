@@ -73,6 +73,7 @@
 		80EA615B1DF06FF700C2C95F /* PromoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EA615A1DF06FF700C2C95F /* PromoController.swift */; };
 		80EA615D1DF0702300C2C95F /* PromoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80EA615C1DF0702300C2C95F /* PromoCell.swift */; };
 		80FBC1481DEC94B500CC97CF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FBC1471DEC94B500CC97CF /* UIColorExtension.swift */; };
+		CA9B5B4E1F95F064008F0C75 /* RefreshContents.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9B5B4D1F95F064008F0C75 /* RefreshContents.xib */; };
 		CAE205131F8E249F005CE925 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAE205121F8E249F005CE925 /* NotificationCenter.framework */; };
 		CAE205191F8E249F005CE925 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAE205171F8E249F005CE925 /* MainInterface.storyboard */; };
 		CAE2051D1F8E249F005CE925 /* Today.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CAE205101F8E249F005CE925 /* Today.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -179,6 +180,7 @@
 		80EA615C1DF0702300C2C95F /* PromoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromoCell.swift; sourceTree = "<group>"; };
 		80EA615E1DF07D4300C2C95F /* PuntoEstetica.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PuntoEstetica.entitlements; sourceTree = "<group>"; };
 		80FBC1471DEC94B500CC97CF /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		CA9B5B4D1F95F064008F0C75 /* RefreshContents.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RefreshContents.xib; sourceTree = "<group>"; };
 		CAE205101F8E249F005CE925 /* Today.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Today.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAE205121F8E249F005CE925 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		CAE205181F8E249F005CE925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				806262311DFAA908004C9AC8 /* StartAnimationController.swift */,
 				80735C3F1DED7DAD00190C9C /* TabBarController.swift */,
 				800EDB7B1DEC69080069EDB4 /* CategorieController.swift */,
+				CA9B5B4D1F95F064008F0C75 /* RefreshContents.xib */,
 				800EDB7F1DEC74CA0069EDB4 /* TrattamentiController.swift */,
 				80735C411DEDB3A300190C9C /* TrattamentiNoListController.swift */,
 				80EA615A1DF06FF700C2C95F /* PromoController.swift */,
@@ -442,6 +445,9 @@
 							com.apple.Push = {
 								enabled = 1;
 							};
+							com.apple.Siri = {
+								enabled = 0;
+							};
 						};
 					};
 					CAE2050F1F8E249F005CE925 = {
@@ -452,6 +458,9 @@
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
 							};
 						};
 					};
@@ -494,6 +503,7 @@
 				806262541DFAD436004C9AC8 /* RobotoCondensed-Light.ttf in Resources */,
 				8062624D1DFAD436004C9AC8 /* Roboto-MediumItalic.ttf in Resources */,
 				806262461DFAD436004C9AC8 /* Roboto-BlackItalic.ttf in Resources */,
+				CA9B5B4E1F95F064008F0C75 /* RefreshContents.xib in Resources */,
 				80410DA41DEF3D590030A0B7 /* PMAlertController.xib in Resources */,
 				806262491DFAD436004C9AC8 /* Roboto-Italic.ttf in Resources */,
 				806262511DFAD436004C9AC8 /* RobotoCondensed-Bold.ttf in Resources */,

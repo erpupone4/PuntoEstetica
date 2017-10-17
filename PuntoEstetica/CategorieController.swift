@@ -51,8 +51,35 @@ class CategorieController: UITableViewController {
     laFisio.textColor      = UIColor(rgba: "#DBDEE2")
     
     configLoading()
+    
+    let refreshControl             = UIRefreshControl()
+    refreshControl.backgroundColor = UIColor.clear
+    refreshControl.tintColor = UIColor(rgba: "#DBDEE2")
+    
+//CODICE PER VISUALIZZARE LA XIB INVECE DEL TESTO STANDARD
+//    var customRefreshView: UIView!
+//    let refreshContents     = Bundle.main.loadNibNamed("RefreshContents", owner: self, options: nil)
+//    customRefreshView       = refreshContents![0] as? UIView
+//
+//    customRefreshView.frame = refreshControl.bounds
+//    refreshControl.addSubview(customRefreshView!)
+
+    if #available(iOS 10.0, *) {
+      tableView.refreshControl = refreshControl
+    } else {
+      tableView.addSubview(refreshControl)
+    }
   }
   
+  override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    if self.refreshControl?.isRefreshing == true {
+      self.refreshControl?.endRefreshing()
+      DispatchQueue.main.async {
+        DownloadManager.shared.downloadJSON("http://www.puntoesteticamonteverde.it/DatiApp.json")
+      }
+    }
+
+  }
   
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()

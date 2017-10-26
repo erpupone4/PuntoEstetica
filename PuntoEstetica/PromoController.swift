@@ -89,6 +89,20 @@ class PromoController: UITableViewController {
                                     description: PromoList[indexPath.row].des.html2String + " ",
                                     image: cell.imgPromo.image, style: .walkthrough)
     
+    alertVC.addAction(PMAlertAction(title: "Condividi", style: .default, action: { () -> Void in
+      let oggetti = [cell.imgPromo.image, cell.laNome.text!, self.PromoList[indexPath.row].des.html2String] as [Any]
+      
+      // creiamo un'istanza di UIActivityViewController
+      let act = UIActivityViewController(activityItems: oggetti,
+                                         applicationActivities: nil)
+      
+      //per esculdere delle condivisioni (eventualmente.. :) decommentare questa riga
+      // eliminare quello che NON vuoi che sia escluso
+      //act.excludedActivityTypes = [UIActivityTypePostToFacebook, UIActivityTypePostToTwitter, UIActivityTypePostToWeibo, UIActivityTypeMessage, UIActivityTypeMail, UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypeAddToReadingList, UIActivityTypePostToFlickr, UIActivityTypePostToVimeo, UIActivityTypePostToTencentWeibo, UIActivityTypeAirDrop]
+      
+      self.present(act, animated: true, completion: nil)
+    }))
+    
     alertVC.addAction(PMAlertAction(title: "Chiudi", style: .default, action: { () -> Void in
       print("Annullato")
     }))

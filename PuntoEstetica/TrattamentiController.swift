@@ -25,7 +25,18 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
     self.tableView.backgroundView                     = UIImageView(image:UIImage(named:"background"))
     navigationController!.navigationBar.barTintColor  = UIColor(rgba: "#2c3e50")
     navigationItem.titleView                          = UIImageView(image: UIImage(named: "logo_top"))
-
+    
+    if self.Categoria == "" {
+      let backbutton = UIButton(type: .custom)
+      backbutton.setImage(UIImage(named: "botArrow"), for: .Normal)
+      backbutton.addTarget(self, action: #selector(self.backAction), for: .touchUpInside)
+      
+      self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backbutton)
+    }
+  }
+  
+  func backAction() -> Void {
+    self.navigationController?.dismiss(animated: true, completion: nil)
   }
   
   override func didReceiveMemoryWarning() {
@@ -37,8 +48,6 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    print("Trattamenti NUMERO->")
-    print(TratList.count + 1)
     if isSearch && mySearchBar.text!.characters.count > 0 {
       return FiltTratList.count + 1
     } else {
@@ -67,7 +76,10 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     if indexPath.row == 0 {
-      return 250;
+      if Categoria == "" {
+        return 0
+      }
+      return 250
     }
     return 65
   }
@@ -132,7 +144,7 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
       }
       
       cell.imgNew.isHidden   = trat.new == ""
-      cell.imgCell.image     = UIImage(named: Categoria)!
+      cell.imgCell.image     = UIImage(named: trat.cate)!
       cell.laNome.textColor  = UIColor(rgba: "#DBDEE2")
       cell.laMin.textColor   = UIColor(rgba: "#DBDEE2")
       cell.laCosto.textColor = UIColor(rgba: "#DBDEE2")
@@ -163,16 +175,139 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
                                       description: infoTrattamento,
                                       image: nil, style: .walkthrough)
       
+      alertVC.addAction(PMAlertAction(title: "Condividi", style: .default, action: { () -> Void in
+        let oggetti = [cell.laNome.text!, infoTrattamento] as [Any]
+        
+        // creiamo un'istanza di UIActivityViewController
+        let act = UIActivityViewController(activityItems: oggetti,
+                                           applicationActivities: nil)
+        
+        //per esculdere delle condivisioni (eventualmente.. :) decommentare questa riga
+        // eliminare quello che NON vuoi che sia escluso
+        //act.excludedActivityTypes = [UIActivityTypePostToFacebook, UIActivityTypePostToTwitter, UIActivityTypePostToWeibo, UIActivityTypeMessage, UIActivityTypeMail, UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypeAddToReadingList, UIActivityTypePostToFlickr, UIActivityTypePostToVimeo, UIActivityTypePostToTencentWeibo, UIActivityTypeAirDrop]
+        
+        self.present(act, animated: true, completion: nil)
+      }))
+      
+      
       alertVC.addAction(PMAlertAction(title: "Chiudi", style: .default, action: { () -> Void in
         print("Annullato")
       }))
       
       present(alertVC, animated: true, completion: nil)
+      
       self.tableView.deselectRow(at: indexPath, animated:true)
     }
   }
   
-  //Metodi per la Ricerca nella Table
+  @available(iOS 11.0, *)
+  override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    var confg = UISwipeActionsConfiguration()
+    
+    if self.Categoria == "" {
+      let action = UIContextualAction(style: .normal, title: nil) { (action, view, done) in
+        DownloadManager.shared.delPreferito(index: indexPath.row - 1)
+        
+        if self.isSearch && self.mySearchBar.text!.characters.count > 0 {
+          self.TratList.remove(at: self.TratList.index(of: self.FiltTratList[indexPath.row - 1])!)
+          self.FiltTratList.remove(at: indexPath.row - 1)
+        } else {
+          self.TratList.remove(at: indexPath.row - 1)
+        }
+
+        tableView.isEditing = false
+        tableView.reloadData()
+        
+        if self.TratList.count == 0 {
+          self.navigationController?.dismiss(animated: true, completion: nil)
+        }
+      }
+      action.backgroundColor = UIColor(rgba: "#ed3e38")
+      action.image = #imageLiteral(resourceName: "trash")
+      
+      confg = UISwipeActionsConfiguration(actions: [action])
+    } else {
+      let action = UIContextualAction(style: .normal, title: nil) { (action, view, done) in
+
+        if !(DownloadManager.shared.FavoArra.contains(where: { $0.nome == self.TratList[indexPath.row - 1].nome})) {
+          if self.isSearch && self.mySearchBar.text!.characters.count > 0 {
+            DownloadManager.shared.addPreferito(trat: self.FiltTratList[indexPath.row - 1])
+          } else {
+            DownloadManager.shared.addPreferito(trat: self.TratList[indexPath.row - 1])
+          }
+
+          let alertVC = PMAlertController(title: "Preferiti",
+                                          description: "Trattamento aggiunto tra i preferiti.",
+                                          image: nil, style: .alert)
+          
+          alertVC.addAction(PMAlertAction(title: "Chiudi", style: .default, action: { () -> Void in
+            print("Annullato")
+          }))
+          
+          self.present(alertVC, animated: true, completion: nil)
+        } else {
+          let alertVC = PMAlertController(title: "Preferiti",
+                                          description: "Trattamento già presente nei preferiti.",
+                                          image: nil, style: .alert)
+          
+          alertVC.addAction(PMAlertAction(title: "Chiudi", style: .default, action: { () -> Void in
+            print("Annullato")
+          }))
+          
+          self.present(alertVC, animated: true, completion: nil)
+        }
+
+        tableView.isEditing = false
+        tableView.reloadData()
+      }
+      action.backgroundColor = UIColor(rgba: "#50f491")
+      action.image = #imageLiteral(resourceName: "prefButton")
+      
+      confg = UISwipeActionsConfiguration(actions: [action])
+    }
+    
+    return confg
+  }
+  
+  override func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+    var button = UITableViewRowAction ()
+    
+    if self.Categoria == "" {
+      button = UITableViewRowAction(style: .normal, title: "\u{267A}\n Delete") { action, index in
+        DownloadManager.shared.delPreferito(index: editActionsForRowAt.row - 1)
+        
+        if self.isSearch && self.mySearchBar.text!.characters.count > 0 {
+          self.TratList.remove(at: self.TratList.index(of: self.FiltTratList[editActionsForRowAt.row - 1])!)
+          self.FiltTratList.remove(at: editActionsForRowAt.row - 1)
+        } else {
+          self.TratList.remove(at: editActionsForRowAt.row - 1)
+        }
+
+        
+        tableView.isEditing = false
+        tableView.reloadData()
+        
+        if self.TratList.count == 0 {
+          self.navigationController?.dismiss(animated: true, completion: nil)
+        }
+      }
+    } else {
+      button = UITableViewRowAction(style: .normal, title: "\u{2606}\n Like") { action, index in
+        if self.isSearch && self.mySearchBar.text!.characters.count > 0 {
+          DownloadManager.shared.addPreferito(trat: self.FiltTratList[editActionsForRowAt.row - 1])
+        } else {
+          DownloadManager.shared.addPreferito(trat: self.TratList[editActionsForRowAt.row - 1])
+        }
+
+        tableView.isEditing = false
+        tableView.reloadData()
+      }
+    }
+    
+    return [button]
+  }
+  
+  /*METODI PER LA RICERCA NELLA TABLE*/
   
   // questo serve per capire quando l'utente tocca la barra per iniziare a cercare
   func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {

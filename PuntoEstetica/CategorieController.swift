@@ -71,6 +71,7 @@ class CategorieController: UITableViewController {
     }
   }
   
+  //AZIONE PER LO SCROLL UPDATE
   override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
     if self.refreshControl?.isRefreshing == true {
       self.refreshControl?.endRefreshing()
@@ -78,7 +79,6 @@ class CategorieController: UITableViewController {
         DownloadManager.shared.downloadJSON("http://www.puntoesteticamonteverde.it/DatiApp.json")
       }
     }
-
   }
   
   override func didReceiveMemoryWarning() {
@@ -116,8 +116,6 @@ class CategorieController: UITableViewController {
         let arrFiltered = list.filter {
           $0.cate == cella.laNome.text!
         }
-        
-        print(arrFiltered.count)
         
         TratController.Categoria  = cella.laNome.text
         TratController.TratList   = arrFiltered

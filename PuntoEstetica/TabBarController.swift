@@ -42,4 +42,21 @@ class TabBarController: UITabBarController {
     return .lightContent
   }
   
+  @IBAction func acFavorite(_ sender: UIButton) {
+    let TratController = self.storyboard?.instantiateViewController(withIdentifier: "TrattamentiController") as? TrattamentiController
+    
+    let noFavController = self.storyboard?.instantiateViewController(withIdentifier: "noFavController")
+    
+    TratController?.Categoria  = ""
+    TratController?.TratList   = DownloadManager.shared.FavoArra
+    TratController?.imgcate    = nil
+    
+    var navigator: UINavigationController = UINavigationController(rootViewController: TratController!)
+    
+    if DownloadManager.shared.FavoArra.count == 0 {
+     navigator = UINavigationController(rootViewController: noFavController!)
+    }
+    
+    self.present(navigator, animated: true, completion: nil)
+  }
 }

@@ -11,18 +11,9 @@ import Foundation
 import OneSignal
 
 class CategorieController: UITableViewController {
- 
-  @IBOutlet var laViso: UILabel!
-  @IBOutlet var laCorpo: UILabel!
-  @IBOutlet var laMani: UILabel!
-  @IBOutlet var laEpilazione: UILabel!
-  @IBOutlet var laDima: UILabel!
-  @IBOutlet var laMassaggi: UILabel!
-  @IBOutlet var laFisio: UILabel!
-  @IBOutlet var laMedici: UILabel!
   
   var config : SwiftLoader.Config = SwiftLoader.Config()
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -41,29 +32,20 @@ class CategorieController: UITableViewController {
     
     DownloadManager.shared.MainController = self
     
-    laViso.textColor       = UIColor(rgba: "#DBDEE2")
-    laCorpo.textColor      = UIColor(rgba: "#DBDEE2")
-    laMani.textColor       = UIColor(rgba: "#DBDEE2")
-    laEpilazione.textColor = UIColor(rgba: "#DBDEE2")
-    laDima.textColor       = UIColor(rgba: "#DBDEE2")
-    laMassaggi.textColor   = UIColor(rgba: "#DBDEE2")
-    laMedici.textColor     = UIColor(rgba: "#DBDEE2")
-    laFisio.textColor      = UIColor(rgba: "#DBDEE2")
-    
     configLoading()
     
     let refreshControl             = UIRefreshControl()
     refreshControl.backgroundColor = UIColor.clear
     refreshControl.tintColor = UIColor(rgba: "#DBDEE2")
     
-//CODICE PER VISUALIZZARE LA XIB INVECE DEL TESTO STANDARD
-//    var customRefreshView: UIView!
-//    let refreshContents     = Bundle.main.loadNibNamed("RefreshContents", owner: self, options: nil)
-//    customRefreshView       = refreshContents![0] as? UIView
-//
-//    customRefreshView.frame = refreshControl.bounds
-//    refreshControl.addSubview(customRefreshView!)
-
+    //CODICE PER VISUALIZZARE LA XIB INVECE DEL TESTO STANDARD
+    //    var customRefreshView: UIView!
+    //    let refreshContents     = Bundle.main.loadNibNamed("RefreshContents", owner: self, options: nil)
+    //    customRefreshView       = refreshContents![0] as? UIView
+    //
+    //    customRefreshView.frame = refreshControl.bounds
+    //    refreshControl.addSubview(customRefreshView!)
+    
     if #available(iOS 10.0, *) {
       tableView.refreshControl = refreshControl
     } else {
@@ -84,13 +66,28 @@ class CategorieController: UITableViewController {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
   }
-
+  
   override func numberOfSections(in tableView: UITableView) -> Int {
     return 1
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 8
+    return DownloadManager.shared.localArra.count - 1
+  }
+  
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cellCate", for: indexPath) as! CategoriaCell
+    
+    cell.isUserInteractionEnabled = true
+
+    let cate : CategoriaModel = DownloadManager.shared.localArra[indexPath.row]
+    
+    cell.laNome.textColor = UIColor(rgba: "#DBDEE2")
+
+    cell.laNome.text   = cate.nome
+    cell.imgCate.image = UIImage(named: cate.nome+"_Home")
+    
+    return cell
   }
   
   override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -101,11 +98,30 @@ class CategorieController: UITableViewController {
     }
   }
   
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+    let list  = DownloadManager.shared.localArra[(indexPath as NSIndexPath).row].lista
+    let cella = self.tableView.cellForRow(at: indexPath) as! CategoriaCell
+
+    let arrFiltered = list.filter {
+      $0.cate == cella.laNome.text!
+    }
+    
+    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    
+    if arrFiltered.count > 0 {
+      self.performSegue(withIdentifier: "detail", sender: self)
+    } else {
+      self.performSegue(withIdentifier: "detailNoList", sender: self)
+    }
+    
+    self.tableView.deselectRow(at: indexPath, animated:true)
+  }
+  
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     if segue.identifier == "detail" {
       let TratController = segue.destination as! TrattamentiController
-    
+      
       if let indexPath = tableView.indexPathForSelectedRow {
         
         // estraiamo la cella selezionata dalla table
@@ -124,7 +140,7 @@ class CategorieController: UITableViewController {
         self.tableView.deselectRow(at: indexPath, animated:true)
       }
     }
-      
+    
     if segue.identifier == "detailNoList" {
       
       let TratController = segue.destination as! TrattamentiNoListController
@@ -159,7 +175,7 @@ class CategorieController: UITableViewController {
   
   func reloadTable() {
     self.tableView.reloadData()
-
+    
     SwiftLoader.hide()
     
     OneSignal.registerForPushNotifications()

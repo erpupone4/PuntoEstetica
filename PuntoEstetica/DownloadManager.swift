@@ -78,6 +78,8 @@ class DownloadManager: NSObject , GraphDelegate {
     
     startGraph();
     
+    localArra.removeAll();
+    
     SwiftLoader.show("Aggiornamento...", animated: true)
         
     _ = request(url, method: .get).responseJSON { response in

@@ -26,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
     
+    //pulisce la console dai vari log per i constrains sputtanati dall'animazione
+    UserDefaults.standard.setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
+    
     return true
   }
   

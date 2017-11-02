@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Awh-Kh-ogN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Awh-Kh-ogN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -64,7 +64,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non ci sono Preferiti." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndB-Wk-9OZ">
-                                <rect key="frame" x="82" y="127" width="293" height="27"/>
+                                <rect key="frame" x="82" y="127" width="293" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -332,7 +332,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="756" y="-688"/>
+            <point key="canvasLocation" x="854" y="-689"/>
         </scene>
         <!--PuntoEstetica-->
         <scene sceneID="yl2-sM-qoP">
@@ -406,11 +406,11 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellCate" rowHeight="90" id="0fm-Sp-2WW" customClass="CategoriaCell" customModule="PuntoEstetica" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0fm-Sp-2WW" id="tiD-c6-CfU">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="0fm-Sp-2WW" id="tiD-c6-CfU">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Viso_Home" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-yb-0Oo">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Viso_Home" translatesAutoresizingMaskIntoConstraints="NO" id="a8G-yb-0Oo">
                                             <rect key="frame" x="8" y="4" width="110" height="80"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="110" id="9Aj-1O-sRw"/>
@@ -422,14 +422,14 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viso" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of8-Q7-sng">
-                                            <rect key="frame" x="135" y="8" width="199" height="73"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Viso" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of8-Q7-sng">
+                                            <rect key="frame" x="135" y="8" width="191" height="73"/>
                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Tqq-3b-m47">
-                                            <rect key="frame" x="342" y="32" width="25" height="25"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Tqq-3b-m47">
+                                            <rect key="frame" x="334" y="32" width="25" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="M3P-pm-A8n"/>
                                                 <constraint firstAttribute="width" constant="25" id="VA2-H3-QmU"/>
@@ -480,7 +480,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Mo-0w-aWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756.79999999999995" y="-0.44977511244377816"/>
+            <point key="canvasLocation" x="854" y="0.0"/>
         </scene>
         <!--Start Animation Controller-->
         <scene sceneID="txx-bo-8tk">
@@ -822,7 +822,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uS8-NU-QWj">
-                                            <rect key="frame" x="347" y="34" width="20" height="20"/>
+                                            <rect key="frame" x="347" y="37" width="20" height="14"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="20" id="WXi-Xz-4gx"/>
                                             </constraints>
@@ -970,7 +970,7 @@
                                             <size key="shadowOffset" width="0.0" height="0.0"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cera Resina Guinot Donna" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JLF-81-Gfp">
-                                            <rect key="frame" x="82" y="39" width="166" height="17"/>
+                                            <rect key="frame" x="82" y="42" width="166" height="17"/>
                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -991,20 +991,20 @@
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="iu5-sz-pbB">
-                                            <rect key="frame" x="57" y="39" width="17" height="17"/>
+                                            <rect key="frame" x="57" y="42" width="17" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="TdS-ka-aXv"/>
                                                 <constraint firstAttribute="width" constant="17" id="jLY-Lz-nTa"/>
                                             </constraints>
                                         </imageView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="euro" translatesAutoresizingMaskIntoConstraints="NO" id="b6o-bV-lZD">
-                                            <rect key="frame" x="256" y="39" width="17" height="17"/>
+                                            <rect key="frame" x="256" y="42" width="17" height="17"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="17" id="SK8-aZ-NIN"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a3-3D-x5V">
-                                            <rect key="frame" x="281" y="37.5" width="58" height="18.5"/>
+                                            <rect key="frame" x="281" y="40.5" width="58" height="18.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="58" id="UfG-17-FMO"/>
                                             </constraints>

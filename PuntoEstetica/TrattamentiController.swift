@@ -113,9 +113,9 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
       }
       
       cell.bbInfo.isHidden          = false
+      cell.bbInfo.isHidden          = false
       cell.isUserInteractionEnabled = true
-      
-      cell.laNome.text  = trat.nome
+      cell.imgMin.isHidden          = false
       
       if trat.min != "" {
         if trat.min.range(of: "Cera") != nil {

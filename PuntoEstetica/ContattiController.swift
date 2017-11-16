@@ -62,7 +62,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   }
   
   @IBAction func acFacebook(_ sender: UIButton) {
-    if let url = NSURL(string: "https://www.facebook.com/puntoesteticamonteverde2016/"), UIApplication.shared.canOpenURL(url as URL) {
+    if let url = NSURL(string: "https://www.facebook.com/Punto-Estetica-M-541386036207286/"), UIApplication.shared.canOpenURL(url as URL) {
       UIApplication.shared.openURL(url as URL)
     }
   }

@@ -732,16 +732,36 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YT5-Ok-0Rn">
                                                     <rect key="frame" x="8" y="1" width="359" height="42"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
-                                                    <state key="normal" title="  Parcheggio Gratuito per i Clienti" image="parking">
+                                                    <state key="normal" image="parking">
                                                         <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 1 ora gratuita per tutti i nostri clienti." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7qY-EG-nKH">
+                                                    <rect key="frame" x="47" y="22" width="312" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Parcheggio Riservato" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wy1-dt-xMc">
+                                                    <rect key="frame" x="47" y="3" width="312" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="wy1-dt-xMc" firstAttribute="top" secondItem="vKt-j0-g4V" secondAttribute="topMargin" constant="-8" id="1ky-vO-LrF"/>
+                                                <constraint firstItem="wy1-dt-xMc" firstAttribute="trailing" secondItem="vKt-j0-g4V" secondAttribute="trailingMargin" id="2NA-Aa-DZV"/>
                                                 <constraint firstAttribute="trailing" secondItem="YT5-Ok-0Rn" secondAttribute="trailing" constant="8" id="6Fa-Ud-hY9"/>
                                                 <constraint firstAttribute="bottom" secondItem="YT5-Ok-0Rn" secondAttribute="bottom" constant="1" id="GL5-vT-Xhl"/>
                                                 <constraint firstItem="YT5-Ok-0Rn" firstAttribute="top" secondItem="vKt-j0-g4V" secondAttribute="top" constant="1" id="I3e-f1-8Df"/>
+                                                <constraint firstItem="7qY-EG-nKH" firstAttribute="top" secondItem="vKt-j0-g4V" secondAttribute="topMargin" constant="11" id="Ilf-8f-trA"/>
+                                                <constraint firstItem="wy1-dt-xMc" firstAttribute="leading" secondItem="vKt-j0-g4V" secondAttribute="leadingMargin" constant="31" id="ThL-19-f86"/>
                                                 <constraint firstItem="YT5-Ok-0Rn" firstAttribute="leading" secondItem="vKt-j0-g4V" secondAttribute="leading" constant="8" id="bVh-Zo-Scx"/>
+                                                <constraint firstItem="wy1-dt-xMc" firstAttribute="trailing" secondItem="7qY-EG-nKH" secondAttribute="trailing" id="cIO-fr-0NK"/>
+                                                <constraint firstItem="wy1-dt-xMc" firstAttribute="leading" secondItem="7qY-EG-nKH" secondAttribute="leading" id="fcB-MA-Dq5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wy1-dt-xMc" secondAttribute="bottom" constant="9" id="hCh-32-QpL"/>
+                                                <constraint firstItem="7qY-EG-nKH" firstAttribute="bottom" secondItem="YT5-Ok-0Rn" secondAttribute="bottom" id="mD7-jG-j1X"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -765,12 +785,14 @@
                         <outlet property="bbPhone1" destination="ZRu-AJ-E8j" id="ede-YW-2aL"/>
                         <outlet property="bbRoute" destination="lQ6-bT-vgB" id="Sxx-kf-lzF"/>
                         <outlet property="laMap" destination="3RW-44-IAB" id="u97-Ra-Vdb"/>
+                        <outlet property="laParking" destination="wy1-dt-xMc" id="o8t-Q3-vD5"/>
+                        <outlet property="laSubParking" destination="7qY-EG-nKH" id="zdh-cZ-Tka"/>
                         <outlet property="mvMap" destination="xiU-ae-EWH" id="yAj-nC-gHB"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fr2-Bg-eeb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6.4000000000000004" y="859.52023988005999"/>
+            <point key="canvasLocation" x="5.5999999999999996" y="859.52023988005999"/>
         </scene>
         <!--Promozioni-->
         <scene sceneID="p4F-OB-89e">

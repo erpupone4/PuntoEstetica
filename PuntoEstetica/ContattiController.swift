@@ -18,6 +18,8 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   @IBOutlet var bbFacebook: UIButton!
   @IBOutlet var laMap: UILabel!
   @IBOutlet var bbParking: UIButton!
+  @IBOutlet var laParking: UILabel!
+  @IBOutlet var laSubParking: UILabel!
   
   
   override func viewDidLoad() {
@@ -30,7 +32,9 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
     bbFacebook.setTitleColor(UIColor(rgba: "#DBDEE2"), for: UIControlState.Normal)
     bbRoute.setTitleColor(UIColor(rgba: "#DBDEE2"),    for: UIControlState.Normal)
     bbParking.setTitleColor(UIColor(rgba: "#DBDEE2"),  for: UIControlState.Normal)
-    laMap.textColor = UIColor(rgba: "#DBDEE2")
+    laMap.textColor        = UIColor(rgba: "#DBDEE2")
+    laParking.textColor    = UIColor(rgba: "#DBDEE2")
+    laSubParking.textColor = UIColor(rgba: "#DBDEE2")
     
     let tabBarHeight            = self.tabBarController?.tabBar.bounds.height
     self.edgesForExtendedLayout = UIRectEdge.all
@@ -43,13 +47,10 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
     let latitude:CLLocationDegrees  =  41.8623074
     let longitude:CLLocationDegrees =  12.467293499999982
     
-    let coordinates = CLLocationCoordinate2DMake(latitude, longitude)
-    let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
-    
-    let mapItem = MKMapItem(placemark: placemark)
-    
-    mapItem.name = "Punto Estetica Monteverde"
-    
+    let coordinates   = CLLocationCoordinate2DMake(latitude, longitude)
+    let placemark     = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+    let mapItem       = MKMapItem(placemark: placemark)
+    mapItem.name      = "Punto Estetica Monteverde"
     let launchOptions = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
     
     mapItem.openInMaps(launchOptions: launchOptions)

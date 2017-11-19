@@ -144,6 +144,7 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
       }
       
       cell.imgNew.isHidden   = trat.new == ""
+      cell.laNome.text       = trat.nome
       cell.imgCell.image     = UIImage(named: trat.cate)!
       cell.laNome.textColor  = UIColor(rgba: "#DBDEE2")
       cell.laMin.textColor   = UIColor(rgba: "#DBDEE2")

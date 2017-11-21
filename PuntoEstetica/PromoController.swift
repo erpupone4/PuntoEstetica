@@ -90,7 +90,7 @@ class PromoController: UITableViewController {
                                     image: cell.imgPromo.image, style: .walkthrough)
     
     alertVC.addAction(PMAlertAction(title: "Condividi", style: .default, action: { () -> Void in
-      let oggetti = [cell.imgPromo.image, cell.laNome.text!, self.PromoList[indexPath.row].des.html2String] as [Any]
+      let oggetti = [cell.imgPromo.image ?? #imageLiteral(resourceName: "logo"), cell.laNome.text!, self.PromoList[indexPath.row].des.html2String] as [Any]
       
       // creiamo un'istanza di UIActivityViewController
       let act = UIActivityViewController(activityItems: oggetti,

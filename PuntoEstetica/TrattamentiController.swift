@@ -18,6 +18,8 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
   var FiltName      : [String] = []
   var isSearch      : Bool        = false
   var mySearchBar   : UISearchBar = UISearchBar()
+  var itemName      : String!
+  var itemDes       : String!
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -109,7 +111,7 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
       if isSearch && mySearchBar.text!.characters.count > 0 {
          trat = FiltTratList[indexPath.row - 1]
       } else {
-          trat = TratList[indexPath.row - 1]
+         trat = TratList[indexPath.row - 1]
       }
       
       cell.bbInfo.isHidden          = false
@@ -162,32 +164,36 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
     if indexPath.row != 0 {
       
-      var infoTrattamento = ""
+      itemName = ""
+      itemDes  = ""
       
       if isSearch && mySearchBar.text!.characters.count > 0 {
-        infoTrattamento = FiltTratList[indexPath.row - 1].des.html2String + " "
+        itemName = FiltTratList[indexPath.row - 1].nome
+        itemDes  = FiltTratList[indexPath.row - 1].des.html2String + " "
       } else {
-          infoTrattamento = TratList[indexPath.row - 1].des.html2String + " "
+        itemName = TratList[indexPath.row - 1].nome
+        itemDes  = TratList[indexPath.row - 1].des.html2String + " "
       }
       
       let cell = tableView.cellForRow(at: indexPath) as! TrattamentoCell
       
       let alertVC = PMAlertController(title: cell.laNome.text!,
-                                      description: infoTrattamento,
+                                      description: itemDes,
                                       image: nil, style: .walkthrough)
       
       alertVC.addAction(PMAlertAction(title: "Condividi", style: .default, action: { () -> Void in
-        let oggetti = [cell.laNome.text!, infoTrattamento] as [Any]
-        
-        // creiamo un'istanza di UIActivityViewController
-        let act = UIActivityViewController(activityItems: oggetti,
-                                           applicationActivities: nil)
-        
-        //per esculdere delle condivisioni (eventualmente.. :) decommentare questa riga
-        // eliminare quello che NON vuoi che sia escluso
-        //act.excludedActivityTypes = [UIActivityTypePostToFacebook, UIActivityTypePostToTwitter, UIActivityTypePostToWeibo, UIActivityTypeMessage, UIActivityTypeMail, UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypeAddToReadingList, UIActivityTypePostToFlickr, UIActivityTypePostToVimeo, UIActivityTypePostToTencentWeibo, UIActivityTypeAirDrop]
-        
-        self.present(act, animated: true, completion: nil)
+        DispatchQueue.global().async {
+          let oggetti = [#imageLiteral(resourceName: "logo"), self.itemName, self.itemDes] as [Any]
+          
+          // creiamo un'istanza di UIActivityViewController
+          let act = UIActivityViewController(activityItems: oggetti, applicationActivities: nil)
+          
+          //per esculdere delle condivisioni (eventualmente.. :) decommentare questa riga
+          // eliminare quello che NON vuoi che sia escluso
+          //act.excludedActivityTypes = [UIActivityTypePostToFacebook, UIActivityTypePostToTwitter, UIActivityTypePostToWeibo, UIActivityTypeMessage, UIActivityTypeMail, UIActivityTypePrint, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypeSaveToCameraRoll, UIActivityTypeAddToReadingList, UIActivityTypePostToFlickr, UIActivityTypePostToVimeo, UIActivityTypePostToTencentWeibo, UIActivityTypeAirDrop]
+          
+          self.present(act, animated: true, completion: nil)
+        }
       }))
       
       
@@ -200,6 +206,7 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
       self.tableView.deselectRow(at: indexPath, animated:true)
     }
   }
+  
   
   @available(iOS 11.0, *)
   override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

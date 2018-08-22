@@ -44,8 +44,8 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   }
   
   @IBAction func acRoute(_ sender: Any) {
-    let latitude:CLLocationDegrees  =  41.8623074
-    let longitude:CLLocationDegrees =  12.467293499999982
+    let latitude:CLLocationDegrees  =  41.8687311
+    let longitude:CLLocationDegrees =  12.468297300000017
     
     let coordinates   = CLLocationCoordinate2DMake(latitude, longitude)
     let placemark     = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
@@ -57,9 +57,26 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   }
 
   @IBAction func acPhone1(_ sender: UIButton) {
-    if let url = NSURL(string: "tel://3914065138"), UIApplication.shared.canOpenURL(url as URL) {
-      UIApplication.shared.openURL(url as URL)
-    }
+    let alertVC = PMAlertController(title: "Contattaci",
+                                    description: "Scegli se contattarci telefonicamente o tramite WhatsApp.",
+                                    image: #imageLiteral(resourceName: "contact"), style: .alert)
+    
+    alertVC.addAction(PMAlertAction(title: "Telefona", style: .default, action: { () -> Void in
+      if let url = NSURL(string: "tel://3914065138"), UIApplication.shared.canOpenURL(url as URL) {
+        UIApplication.shared.openURL(url as URL)
+      }
+    }))
+    
+    alertVC.addAction(PMAlertAction(title: "WhatsApp", style: .default, action: { () -> Void in
+      if let url = NSURL(string: "https://api.whatsapp.com/send?phone=393914065138"), UIApplication.shared.canOpenURL(url as URL) {
+        UIApplication.shared.openURL(url as URL)
+      }}))
+    
+    alertVC.addAction(PMAlertAction(title: "Chiudi", style: .default, action: { () -> Void in
+      print("Nessuna Connessione")
+    }))
+    
+    self.present(alertVC, animated: true, completion: nil)
   }
   
   @IBAction func acFacebook(_ sender: UIButton) {
@@ -91,7 +108,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
     
     
     if Reachability.isConnectedToNetwork() {
-      searchPoiWithName("Via Vincenzo Brunacci, 37 Roma", map: mvMap, closure: { (pins) in
+      searchPoiWithName("Viale Guglielmo Marconi, 29 Roma", map: mvMap, closure: { (pins) in
         //una volta trovato il punto cercato mettiamo il pin
         self.mvMap.addAnnotation(pins!)
         

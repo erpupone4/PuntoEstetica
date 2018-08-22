@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Awh-Kh-ogN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Awh-Kh-ogN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -64,7 +64,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Non ci sono Preferiti." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndB-Wk-9OZ">
-                                <rect key="frame" x="82" y="127" width="293" height="23.5"/>
+                                <rect key="frame" x="82" y="127" width="293" height="26.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -423,13 +423,13 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Viso" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of8-Q7-sng">
-                                            <rect key="frame" x="135" y="8" width="191" height="73"/>
+                                            <rect key="frame" x="135" y="11" width="191" height="73"/>
                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Tqq-3b-m47">
-                                            <rect key="frame" x="334" y="32" width="25" height="25"/>
+                                            <rect key="frame" x="334" y="35" width="25" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="M3P-pm-A8n"/>
                                                 <constraint firstAttribute="width" constant="25" id="VA2-H3-QmU"/>
@@ -442,6 +442,7 @@
                                         <constraint firstItem="of8-Q7-sng" firstAttribute="top" secondItem="tiD-c6-CfU" secondAttribute="topMargin" id="99H-HW-Y9X"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Tqq-3b-m47" secondAttribute="bottom" constant="24.5" id="F1k-tp-lFj"/>
                                         <constraint firstItem="of8-Q7-sng" firstAttribute="centerY" secondItem="Tqq-3b-m47" secondAttribute="centerY" id="GBC-lZ-CzY"/>
+                                        <constraint firstItem="a8G-yb-0Oo" firstAttribute="centerY" secondItem="tiD-c6-CfU" secondAttribute="centerY" id="Rvh-cf-sdL"/>
                                         <constraint firstItem="of8-Q7-sng" firstAttribute="leading" secondItem="a8G-yb-0Oo" secondAttribute="trailing" constant="17" id="YEB-pL-63h"/>
                                         <constraint firstItem="a8G-yb-0Oo" firstAttribute="top" secondItem="tiD-c6-CfU" secondAttribute="top" constant="4" id="ZDN-MF-LhD"/>
                                         <constraint firstItem="Tqq-3b-m47" firstAttribute="leading" secondItem="of8-Q7-sng" secondAttribute="trailing" constant="8" symbolic="YES" id="as6-J3-xAK"/>
@@ -658,7 +659,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRu-AJ-E8j">
                                                     <rect key="frame" x="8" y="1" width="359" height="42"/>
                                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
-                                                    <state key="normal" title="  391-4065138" image="smart">
+                                                    <state key="normal" title=" Contattaci" image="smart">
                                                         <color key="titleColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
@@ -722,7 +723,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ParkingCell" id="9a7-jg-FvV">
+                                    <tableViewCell hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ParkingCell" id="9a7-jg-FvV">
                                         <rect key="frame" x="0.0" y="482" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9a7-jg-FvV" id="vKt-j0-g4V">
@@ -1026,7 +1027,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3a3-3D-x5V">
-                                            <rect key="frame" x="281" y="42.5" width="58" height="16.5"/>
+                                            <rect key="frame" x="281" y="40.5" width="58" height="18.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="58" id="UfG-17-FMO"/>
                                             </constraints>

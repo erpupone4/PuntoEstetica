@@ -44,8 +44,8 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   }
   
   @IBAction func acRoute(_ sender: Any) {
-    let latitude:CLLocationDegrees  =  41.8687311
-    let longitude:CLLocationDegrees =  12.468297300000017
+    let latitude:CLLocationDegrees  =  41.8689229
+    let longitude:CLLocationDegrees =  12.468368599999962
     
     let coordinates   = CLLocationCoordinate2DMake(latitude, longitude)
     let placemark     = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
@@ -108,7 +108,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
     
     
     if Reachability.isConnectedToNetwork() {
-      searchPoiWithName("Viale Guglielmo Marconi, 29 Roma", map: mvMap, closure: { (pins) in
+      searchPoiWithName("Viale Guglielmo Marconi, 19 Roma", map: mvMap, closure: { (pins) in
         //una volta trovato il punto cercato mettiamo il pin
         self.mvMap.addAnnotation(pins!)
         
@@ -124,7 +124,7 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
     let searchRequest = MKLocalSearchRequest()
     searchRequest.naturalLanguageQuery = name
     
-    let location = CLLocationCoordinate2D(latitude: 41.8623074, longitude: 12.467293499999982)
+    let location = CLLocationCoordinate2D(latitude: 41.8689229, longitude: 12.468368599999962)
     let span     = MKCoordinateSpanMake(0.006, 0.006)
     let mappa    = MKCoordinateRegion(center: location, span: span)
     

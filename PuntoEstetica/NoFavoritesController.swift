@@ -17,9 +17,10 @@ class NoFavoritesController: UIViewController {
     super.viewDidLoad()
     
     //Codice per colorare la band bianca in basso nell'iPhone X
-    self.view.backgroundColor                         = UIColor(rgba: "#404c5c")
+//    self.view.backgroundColor                         = UIColor(rgba: "#474e58")
+    self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
     
-    navigationController!.navigationBar.barTintColor  = UIColor(rgba: "#2c3e50")
+    navigationController!.navigationBar.barTintColor  = UIColor(rgba: "#474e58")
     navigationItem.titleView                          = UIImageView(image: UIImage(named: "logo_top"))
 
     laExample.textColor = UIColor(rgba: "#DBDEE2")

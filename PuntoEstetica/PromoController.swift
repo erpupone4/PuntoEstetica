@@ -18,7 +18,7 @@ class PromoController: UITableViewController {
     super.viewDidLoad()
     
     self.tableView.backgroundView                     = UIImageView(image:UIImage(named:"background"))
-    navigationController!.navigationBar.barTintColor  = UIColor(rgba: "#2c3e50")
+    navigationController!.navigationBar.barTintColor  = UIColor(rgba: "#474e58")
     navigationItem.titleView                          = UIImageView(image: UIImage(named: "logo_top"))
     
     let filtered = DownloadManager.shared.localArra.filter {

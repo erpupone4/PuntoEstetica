@@ -25,8 +25,9 @@ class TrattamentiController: UITableViewController, UIViewControllerTransitionin
     super.viewDidLoad()
     
     self.tableView.backgroundView                     = UIImageView(image:UIImage(named:"background"))
-    navigationController!.navigationBar.barTintColor  = UIColor(rgba: "#2c3e50")
+    navigationController!.navigationBar.barTintColor  = UIColor(rgba: "#474e58")
     navigationItem.titleView                          = UIImageView(image: UIImage(named: "logo_top"))
+    self.view.backgroundColor                         = UIColor(rgba: "#474e58")
     
     if self.Categoria == "" {
       let backbutton = UIButton(type: .custom)

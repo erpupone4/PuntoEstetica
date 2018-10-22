@@ -18,8 +18,6 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
   @IBOutlet var bbFacebook: UIButton!
   @IBOutlet var laMap: UILabel!
   @IBOutlet var bbParking: UIButton!
-  @IBOutlet var laParking: UILabel!
-  @IBOutlet var laSubParking: UILabel!
   
   
   override func viewDidLoad() {
@@ -33,8 +31,9 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
     bbRoute.setTitleColor(UIColor(rgba: "#DBDEE2"),    for: UIControlState.Normal)
     bbParking.setTitleColor(UIColor(rgba: "#DBDEE2"),  for: UIControlState.Normal)
     laMap.textColor        = UIColor(rgba: "#DBDEE2")
-    laParking.textColor    = UIColor(rgba: "#DBDEE2")
-    laSubParking.textColor = UIColor(rgba: "#DBDEE2")
+    
+    bbFacebook.imageView?.backgroundColor = UIColor.red
+    bbFacebook.imageEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
     
     let tabBarHeight            = self.tabBarController?.tabBar.bounds.height
     self.edgesForExtendedLayout = UIRectEdge.all
@@ -55,7 +54,10 @@ class ContattiController: UITableViewController, MKMapViewDelegate {
     
     mapItem.openInMaps(launchOptions: launchOptions)
   }
-
+  @IBAction func acBooking(_ sender: UIButton) {
+    UIApplication.shared.openURL(NSURL(string: "https://widget.treatwell.it/salone/punto-estetica-monteverde/")! as URL)
+  }
+  
   @IBAction func acPhone1(_ sender: UIButton) {
     let alertVC = PMAlertController(title: "Contattaci",
                                     description: "Scegli se contattarci telefonicamente o tramite WhatsApp.",

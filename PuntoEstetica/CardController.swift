@@ -41,6 +41,9 @@ class CardController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+//    self.view.backgroundColor = UIColor(rgba: "#474e58")
+    self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
+    
     // || IDevice.current.modelName == "Simulator")
     if  (UIDevice.current.modelName == "iPhone 5")  || (UIDevice.current.modelName == "iPhone 5c") || (UIDevice.current.modelName == "iPhone 5s") || (UIDevice.current.modelName == "iPhone SE")
     {

@@ -16,15 +16,17 @@ class CategorieController: UITableViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.view.backgroundColor = UIColor(rgba: "#474e58")
     
     //codice per far non far nascondere la table sotto la TabBar
     let tabBarHeight            = self.tabBarController?.tabBar.bounds.height
     self.edgesForExtendedLayout = UIRectEdge.all
     self.tableView.contentInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: tabBarHeight!, right: 0.0)
     
-    navigationController!.navigationBar.backgroundColor = UIColor(rgba: "#ecf0f1")
-    navigationController!.navigationBar.barTintColor    = UIColor(rgba: "#2c3e50")
+    navigationController!.navigationBar.backgroundColor = UIColor(rgba: "#474e58")
+    navigationController!.navigationBar.barTintColor    = UIColor(rgba: "#474e58")
     navigationController!.navigationBar.tintColor       = UIColor.white
+    self.view.backgroundColor                           = UIColor(rgba: "#474e58")
     
     navigationItem.titleView = UIImageView(image: UIImage(named: "logo_top"))
     
@@ -46,7 +48,7 @@ class CategorieController: UITableViewController {
     //    customRefreshView.frame = refreshControl.bounds
     //    refreshControl.addSubview(customRefreshView!)
     
-    if #available(iOS 10.0, *) {
+    if #available(iOS 11, *) {
       tableView.refreshControl = refreshControl
     } else {
       tableView.addSubview(refreshControl)
@@ -57,9 +59,9 @@ class CategorieController: UITableViewController {
   override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
     if self.refreshControl?.isRefreshing == true {
       self.refreshControl?.endRefreshing()
-      DispatchQueue.main.async {
+//      DispatchQueue.main.async {
         DownloadManager.shared.downloadJSON("http://www.puntoesteticamonteverde.it/DatiApp.json")
-      }
+//      }
     }
   }
   
@@ -80,13 +82,14 @@ class CategorieController: UITableViewController {
     
     cell.isUserInteractionEnabled = true
 
-    let cate : CategoriaModel = DownloadManager.shared.localArra[indexPath.row]
-    
-    cell.laNome.textColor = UIColor(rgba: "#DBDEE2")
+    if DownloadManager.shared.localArra.count != 0 {
+      let cate : CategoriaModel = DownloadManager.shared.localArra[indexPath.row]
+      
+      cell.laNome.textColor = UIColor(rgba: "#DBDEE2")
 
-    cell.laNome.text   = cate.nome
-    cell.imgCate.image = UIImage(named: cate.nome+"_Home")
-    
+      cell.laNome.text   = cate.nome
+      cell.imgCate.image = UIImage(named: cate.nome+"_Home")
+    }
     return cell
   }
   

@@ -18,7 +18,8 @@ class TabBarController: UITabBarController {
     navigationItem.titleView = UIImageView(image: UIImage(named: "logo_top"))
     
     UITabBar.appearance().tintColor    = UIColor.white
-    UITabBar.appearance().barTintColor = UIColor(rgba: "#2c3e50")
+    UITabBar.appearance().barTintColor = UIColor(rgba: "#474e58")
+    self.view.backgroundColor          = UIColor(rgba: "#474e58")
     UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.white], for:.Normal)
     
     let CateItem  = tbMain.items![0] as UITabBarItem

@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }))
     
     alertVC.addAction(PMAlertAction(title: "Aggiorna", style: .default, action: { () in
-      DownloadManager.shared.downloadJSON("http://www.puntoesteticamonteverde.it/DatiApp.json")
+      DownloadManager.shared.downloadJSON("http://www.puntoesteticamonteverde.it/DatiApp1.9.json")
     }))
     
     while (presentedVC!.presentedViewController != nil)  {

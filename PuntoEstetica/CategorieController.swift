@@ -60,7 +60,7 @@ class CategorieController: UITableViewController {
     if self.refreshControl?.isRefreshing == true {
       self.refreshControl?.endRefreshing()
 //      DispatchQueue.main.async {
-        DownloadManager.shared.downloadJSON("http://www.puntoesteticamonteverde.it/DatiApp.json")
+        DownloadManager.shared.downloadJSON("http://www.puntoesteticamonteverde.it/DatiApp1.9.json")
 //      }
     }
   }
@@ -109,7 +109,7 @@ class CategorieController: UITableViewController {
       $0.cate == cella.laNome.text!
     }
     
-    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    let _ : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
     
     if arrFiltered.count > 0 {
       self.performSegue(withIdentifier: "detail", sender: self)

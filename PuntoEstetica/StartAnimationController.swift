@@ -116,7 +116,7 @@ class StartAnimationController: UIViewController {
       return
     }
     
-    DownloadManager.shared.downloadJSON("http://www.puntoesteticamonteverde.it/DatiApp.json")
+    DownloadManager.shared.downloadJSON("http://www.puntoesteticamonteverde.it/DatiApp1.9.json")
   }
   
 }

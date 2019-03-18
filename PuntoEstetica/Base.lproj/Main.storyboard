@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Awh-Kh-ogN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Awh-Kh-ogN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -855,7 +855,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u78-E7-ELD">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u78-E7-ELD">
                                             <rect key="frame" x="126" y="8" width="206" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="YT7-VL-beY"/>
@@ -866,10 +866,10 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Valida per il Mese di Dicembre e Gennaio" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHV-Ej-rVO">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valida per il Mese di Dicembre e Gennaio" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHV-Ej-rVO">
                                             <rect key="frame" x="126" y="34" width="206" height="47"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="47" id="daF-q3-6Fn"/>
+                                                <constraint firstAttribute="height" constant="47" id="vak-5R-CNJ"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                                             <nil key="textColor"/>
@@ -882,26 +882,37 @@
                                             </constraints>
                                             <state key="normal" image="infoButton"/>
                                         </button>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="badgeNew" translatesAutoresizingMaskIntoConstraints="NO" id="alJ-zX-2fX">
+                                            <rect key="frame" x="97" y="60" width="28" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
+                                        <constraint firstItem="fHV-Ej-rVO" firstAttribute="top" secondItem="u78-E7-ELD" secondAttribute="bottom" constant="1" id="2rs-Qw-XAl"/>
                                         <constraint firstItem="AXL-1d-nSX" firstAttribute="leading" secondItem="J1N-pD-8YY" secondAttribute="leading" constant="8" id="4TP-S4-u8x"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="fHV-Ej-rVO" secondAttribute="bottom" constant="-2" id="4il-Od-SOc"/>
                                         <constraint firstItem="uS8-NU-QWj" firstAttribute="top" secondItem="J1N-pD-8YY" secondAttribute="topMargin" constant="26" id="6Nf-pd-4ue"/>
-                                        <constraint firstItem="fHV-Ej-rVO" firstAttribute="leading" secondItem="AXL-1d-nSX" secondAttribute="trailing" constant="8" id="EBX-uc-X2X"/>
+                                        <constraint firstItem="fHV-Ej-rVO" firstAttribute="leading" secondItem="u78-E7-ELD" secondAttribute="leading" id="Ec2-ft-yw1"/>
                                         <constraint firstAttribute="trailing" secondItem="u78-E7-ELD" secondAttribute="trailing" constant="43" id="Iot-U6-LHt"/>
+                                        <constraint firstItem="fHV-Ej-rVO" firstAttribute="trailing" secondItem="u78-E7-ELD" secondAttribute="trailing" id="OMD-za-zpJ"/>
                                         <constraint firstItem="uS8-NU-QWj" firstAttribute="trailing" secondItem="u78-E7-ELD" secondAttribute="trailing" constant="35" id="PII-ra-COS"/>
                                         <constraint firstItem="u78-E7-ELD" firstAttribute="top" secondItem="J1N-pD-8YY" secondAttribute="top" constant="8" id="Ufy-FP-WaK"/>
                                         <constraint firstItem="AXL-1d-nSX" firstAttribute="top" secondItem="J1N-pD-8YY" secondAttribute="top" constant="4" id="Vzw-N2-cSj"/>
                                         <constraint firstItem="uS8-NU-QWj" firstAttribute="centerY" secondItem="AXL-1d-nSX" secondAttribute="centerY" id="d2X-ek-YX2"/>
                                         <constraint firstAttribute="bottom" secondItem="AXL-1d-nSX" secondAttribute="bottom" constant="5" id="eyN-lT-ruP"/>
                                         <constraint firstItem="u78-E7-ELD" firstAttribute="leading" secondItem="AXL-1d-nSX" secondAttribute="trailing" constant="8" id="gU4-QM-j6c"/>
-                                        <constraint firstAttribute="bottom" secondItem="fHV-Ej-rVO" secondAttribute="bottom" constant="9" id="ovw-fR-A3o"/>
-                                        <constraint firstAttribute="trailing" secondItem="fHV-Ej-rVO" secondAttribute="trailing" constant="43" id="wIX-uy-GUZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="imgPromo" destination="AXL-1d-nSX" id="vvT-KJ-45I"/>
+                                    <outlet property="imgType" destination="alJ-zX-2fX" id="zXC-jk-SYx"/>
                                     <outlet property="laNome" destination="u78-E7-ELD" id="B2n-5i-uHX"/>
                                     <outlet property="laVali" destination="fHV-Ej-rVO" id="dKo-Ui-1Ud"/>
                                 </connections>
@@ -912,14 +923,14 @@
                             <outlet property="delegate" destination="j7e-71-3aA" id="TYb-PR-Ntt"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Promozioni" image="promoSel" selectedImage="promo" id="6vy-mz-ihv"/>
+                    <tabBarItem key="tabBarItem" title="Promozioni &amp; Novità" image="promoSel" selectedImage="promo" id="6vy-mz-ihv"/>
                     <navigationItem key="navigationItem" title="Promozioni" id="hsh-cF-whO">
                         <barButtonItem key="backBarButtonItem" title=" " id="qde-wT-iVH"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GqY-J3-aLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756.79999999999995" y="859.52023988005999"/>
+            <point key="canvasLocation" x="756" y="859.52023988005999"/>
         </scene>
         <!--TrattamentiNoListController-->
         <scene sceneID="w6Z-fb-FKI">
@@ -1130,6 +1141,7 @@
         <image name="Viso_Home" width="1000" height="750"/>
         <image name="arrow" width="52.799999237060547" height="52.799999237060547"/>
         <image name="background" width="650" height="1126"/>
+        <image name="badgeNew" width="33" height="33"/>
         <image name="botLaunch" width="1242" height="1104"/>
         <image name="calendar" width="44" height="44"/>
         <image name="card_icon" width="52.799999237060547" height="52.799999237060547"/>

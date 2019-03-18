@@ -13,7 +13,6 @@ class PromoController: UITableViewController {
   var PromoList : [TrattamentoModel] = []
   var imgcate   : UIImage!
   
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -60,6 +59,14 @@ class PromoController: UITableViewController {
       cell.laVali.text   = promo.min;
     } else {
       cell.laVali.text   = "";
+    }
+    
+    if promo.new == "new" {
+      cell.imgType.image = UIImage(named:"badgeNew")
+    }
+    
+    if promo.new == "promo" {
+      cell.imgType.image = UIImage(named:"badgePromo")
     }
     
     cell.request = request("http://www.puntoesteticamonteverde.it/"+promo.img, method: .get).responseData(completionHandler: { (data) in

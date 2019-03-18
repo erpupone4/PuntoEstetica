@@ -13,6 +13,7 @@ class PromoCell: UITableViewCell {
   @IBOutlet var imgPromo: UIImageView!
   @IBOutlet var laNome: UILabel!
   @IBOutlet var laVali: UILabel!
+  @IBOutlet var imgType: UIImageView!
   
   // questa var speciale serve per distinguere le richieste di download dell'icona da una cella all'altra
   // è necessario per via del riciclo di celle operato dalla tableView

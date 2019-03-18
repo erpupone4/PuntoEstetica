@@ -44,11 +44,11 @@ class CardController: UIViewController {
 //    self.view.backgroundColor = UIColor(rgba: "#474e58")
     self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
     
-    // || IDevice.current.modelName == "Simulator")
     if  (UIDevice.current.modelName == "iPhone 5")  || (UIDevice.current.modelName == "iPhone 5c") || (UIDevice.current.modelName == "iPhone 5s") || (UIDevice.current.modelName == "iPhone SE")
     {
       csTop1.constant  = 250
-      csTop2.constant  = 277 //292
+      
+      csTop2.constant  = 277
       csTop3.constant  = 294
       csTop4.constant  = 311
       csTop5.constant  = 328
@@ -75,6 +75,25 @@ class CardController: UIViewController {
       laCode11.font = laCode1.font.withSize(19)
       laCode12.font = laCode1.font.withSize(19)
       laCode13.font = laCode1.font.withSize(19)
+    }
+    
+    if  (UIDevice.current.modelName == "iPhone X")      || (UIDevice.current.modelName == "iPhone XS") || (UIDevice.current.modelName == "iPhone XS Max") || (UIDevice.current.modelName == "iPhone XR")
+    {
+      csTop1.constant  = 320
+      
+      csTop2.constant  = 377
+      csTop3.constant  = 395
+      csTop4.constant  = 411
+      csTop5.constant  = 428
+      csTop6.constant  = 444
+      csTop7.constant  = 461
+      
+      csTop8.constant  = 519
+      csTop9.constant  = 536
+      csTop10.constant = 553
+      csTop11.constant = 570
+      csTop12.constant = 586
+      csTop13.constant = 603
     }
     
     let defaults = UserDefaults.standard
